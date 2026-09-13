@@ -1,0 +1,23 @@
+# ninja log v5
+9886	10055	8045837651713032	D:/KnifeHit/Knife Hit/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/36a506o6/obj/armeabi-v7a/libgame.so	f6b1cda4f6a940a7
+19	5925	8045837609777052	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	e45676d2fa69259c
+54	5907	8045837609507246	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	a38da041103bcb02
+7118	7600	8045837626649283	D:/KnifeHit/Knife Hit/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/36a506o6/obj/armeabi-v7a/libswappywrapper.so	8a2239d6957a6bb9
+41	6237	8045837612425485	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	115fa2f157b97ea5
+5908	9629	8045837647330231	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	78d113bf5c865750
+31	6333	8045837613809960	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	da8f427a2beae533
+6238	7118	8045837621351937	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	10348a92846b3a38
+11	7749	8045837628503395	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	6c7e7df254b087c2
+71	7410	8045837624700388	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	71e0453e332fd89c
+5926	9886	8045837649919227	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	6fbe9f9070e83443
+41	5008	8047786291295926	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	e45676d2fa69259c
+17	5109	8047786292365189	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	115fa2f157b97ea5
+57	5329	8047786294671371	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	a38da041103bcb02
+27	5384	8047786295361031	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	da8f427a2beae533
+5329	5984	8047786301423425	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	10348a92846b3a38
+68	6206	8047786303762470	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	71e0453e332fd89c
+5985	6482	8047786306732275	D:/KnifeHit/Knife Hit/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/36a506o6/obj/armeabi-v7a/libswappywrapper.so	8a2239d6957a6bb9
+10	6638	8047786308287424	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	6c7e7df254b087c2
+5009	8204	8047786324061419	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	78d113bf5c865750
+5109	8450	8047786326461701	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	6fbe9f9070e83443
+8451	8617	8047786328235138	D:/KnifeHit/Knife Hit/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/36a506o6/obj/armeabi-v7a/libgame.so	f6b1cda4f6a940a7
