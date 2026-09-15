@@ -8,6 +8,6 @@ public class GameSceneManager : MonoBehaviour
         PlayerPrefs.SetInt("OpenChallengePanel", 1);
         PlayerPrefs.Save();
 
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("HomeScene");
     }
 }
