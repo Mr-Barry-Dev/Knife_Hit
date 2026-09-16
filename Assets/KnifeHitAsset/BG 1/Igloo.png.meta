@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 12df88cda62d9684dbab6f0537083817
+guid: 417fc2ec0cf2c4640b31d5f4bc463f5d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3355880297675623317
-    second: pngwing.com(59)_0
+      213: -2605421875397535091
+    second: Igloo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 600
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pngwing.com(59)_0
+      name: Igloo_0
       rect:
         serializedVersion: 2
-        x: 66
-        y: 57
-        width: 1196
-        height: 1202
+        x: 37
+        y: 24
+        width: 5926
+        height: 3909
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 59b00bbb95b729e20800000000000000
-      internalID: 3355880297675623317
+      spriteID: d8ad5e2cb9ea7dbd0800000000000000
+      internalID: -2605421875397535091
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pngwing.com(59)_0: 3355880297675623317
+      Igloo_0: -2605421875397535091
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 12df88cda62d9684dbab6f0537083817
+guid: 49936dbeb5fae294fa08d7f5bec12a27
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3355880297675623317
-    second: pngwing.com(59)_0
+      213: 8051394799075408105
+    second: SnowMan_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 600
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pngwing.com(59)_0
+      name: SnowMan_0
       rect:
         serializedVersion: 2
-        x: 66
-        y: 57
-        width: 1196
-        height: 1202
+        x: 224
+        y: 324
+        width: 364
+        height: 535
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 59b00bbb95b729e20800000000000000
-      internalID: 3355880297675623317
+      spriteID: 9e8315169ec4cbf60800000000000000
+      internalID: 8051394799075408105
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pngwing.com(59)_0: 3355880297675623317
+      SnowMan_0: 8051394799075408105
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
