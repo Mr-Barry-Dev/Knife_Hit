@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f1ebd190187a2b545aa72b465ffac775
+guid: 8f1b08017e5a01e4484488ce77a553d9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5725305003597216418
-    second: wood 8_0
+      213: -7148616214145791002
+    second: knife 13_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 170
+  spritePixelsToUnits: 500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wood 8_0
+      name: knife 13_0
       rect:
         serializedVersion: 2
-        x: 307
-        y: 384
-        width: 337
-        height: 348
+        x: 422
+        y: 159
+        width: 154
+        height: 739
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e5542d5ee61ab80b0800000000000000
-      internalID: -5725305003597216418
+      spriteID: 6eb0e30ad630bcc90800000000000000
+      internalID: -7148616214145791002
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      wood 8_0: -5725305003597216418
+      knife 13_0: -7148616214145791002
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
