@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cornval.unity
     guid: 2c9b041eb57d8784fbf885a946e54ce2
+  - enabled: 1
+    path: Assets/Scenes/QuickGame.unity
+    guid: e2557ef66e9f59a4b9aa7cfa679e49be
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
