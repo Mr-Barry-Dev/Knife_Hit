@@ -6838,6 +6838,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1925516996}
   circleRenderer: {fileID: 983642894}
+  circleDestroyEffect: {fileID: 0}
   circleSkins:
   - {fileID: 3355880297675623317, guid: 12df88cda62d9684dbab6f0537083817, type: 3}
   - {fileID: 3355880297675623317, guid: 12df88cda62d9684dbab6f0537083817, type: 3}
@@ -6871,16 +6872,11 @@ MonoBehaviour:
   - {fileID: 6448390446752961210}
   - {fileID: 744617434}
   currentChallenge: 0
-  stagePopups:
-  - panel: {fileID: 1998295490}
-    stageText: {fileID: 1473302733}
+  stagePopup:
+    panel: {fileID: 0}
+    stageText: {fileID: 0}
     popupSound: {fileID: 0}
-  - panel: {fileID: 1998295490}
-    stageText: {fileID: 1473302733}
-    popupSound: {fileID: 0}
-  - panel: {fileID: 458506486}
-    stageText: {fileID: 188935239}
-    popupSound: {fileID: 0}
+  stagePanelShowAtStage: 3
   panelShowTime: 1
   animationTime: 0.25
   knifePrefab: {fileID: 861096564064101411, guid: 6d5050ba5c0a654409e9dda915437ef3, type: 3}
@@ -8145,7 +8141,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_Sprite: {fileID: 130452656225014213, guid: 5e45ea65702dafd4e8a62d028f72e3a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8914,8 +8910,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1832}
-  m_SizeDelta: {x: 700, y: 180}
+  m_AnchoredPosition: {x: 0, y: 1800}
+  m_SizeDelta: {x: 1000, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &684975162737212291
 GameObject:
@@ -9699,15 +9695,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8962264, g: 0.6704788, b: 0.51998043, a: 0.7647059}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a3bba806bc4d8c84e8b5b5087f9fd709, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: -105497433518616501, guid: e37ddd84b8f42c04c8e0540d46516b6c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -9844,7 +9840,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &2363492845777887272
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12860,7 +12856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &7854390495739244033
 GameObject:
   m_ObjectHideFlags: 0
