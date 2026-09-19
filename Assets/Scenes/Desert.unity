@@ -2312,7 +2312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetRenderer: {fileID: 983642894}
-  bossSprite: {fileID: 9131529679284229231, guid: c38d8add0d75d4541a053660fa702d93, type: 3}
+  bossSprite: {fileID: 42340460381927283, guid: 153158dacd7961e4d9d50ec2dcc390cf, type: 3}
   minSpeed: 150
   maxSpeed: 400
   stopChance: 0.4
