@@ -639,7 +639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetRenderer: {fileID: 426504936}
-  bossSprite: {fileID: -5725305003597216418, guid: f1ebd190187a2b545aa72b465ffac775, type: 3}
+  bossSprite: {fileID: -856085545168688419, guid: 004adb4bff97d2442add6dc0e73ee660, type: 3}
   minSpeed: 150
   maxSpeed: 400
   stopChance: 0.4
@@ -1541,7 +1541,7 @@ MonoBehaviour:
   - {fileID: -5472933233132465363, guid: dd8998fd32860f745a3da974ea2ed32a, type: 3}
   - {fileID: -5472933233132465363, guid: dd8998fd32860f745a3da974ea2ed32a, type: 3}
   - {fileID: -5472933233132465363, guid: dd8998fd32860f745a3da974ea2ed32a, type: 3}
-  - {fileID: 3355880297675623317, guid: 12df88cda62d9684dbab6f0537083817, type: 3}
+  - {fileID: -856085545168688419, guid: 004adb4bff97d2442add6dc0e73ee660, type: 3}
   knifeCounts: 01000000010000000100000001000000
   rotationScripts:
   - {fileID: 673848329}
