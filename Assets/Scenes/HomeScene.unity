@@ -30806,7 +30806,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 50, y: 0}
-  m_SizeDelta: {x: 150, y: 150}
+  m_SizeDelta: {x: 130, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1601785191
 MonoBehaviour:
@@ -39908,14 +39908,14 @@ MonoBehaviour:
   soundBackground: {fileID: 4646081908328749227}
   soundOnColor: {r: 0, g: 1, b: 0, a: 1}
   soundOffColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  soundOnX: 30
-  soundOffX: -30
+  soundOnX: 50
+  soundOffX: -50
   soundSlideDuration: 0.15
   privacyPolicyButton: {fileID: 1459688303}
   privacyPolicyURL: https://bestjobsites7970.blogspot.com/2025/07/privacy-policy-this-privacy-policy.html
   resetGameButton: {fileID: 4669264052481639742}
   buttonAudioSource: {fileID: 2027696305}
-  buttonClickSound: {fileID: 8300000, guid: a62eca170bd699747874d64b489206a7, type: 3}
+  buttonClickSound: {fileID: 8300000, guid: 854db8f6910124543819b9fef5046dc0, type: 3}
   ignoreSoundPanels:
   - {fileID: 6383684044174057888}
   pulseButton: {fileID: 7191024301409026953}
@@ -39985,7 +39985,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: a62eca170bd699747874d64b489206a7, type: 3}
+  m_Resource: {fileID: 8300000, guid: 854db8f6910124543819b9fef5046dc0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -56103,7 +56103,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 370, y: 407}
-  m_SizeDelta: {x: 250, y: 130}
+  m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4697121632025295868
 GameObject:
@@ -68969,7 +68969,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.0000038147, y: 2.7259}
-  m_SizeDelta: {x: 150, y: 150}
+  m_SizeDelta: {x: 130, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9173849975972323833
 MonoBehaviour:

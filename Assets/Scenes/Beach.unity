@@ -1435,7 +1435,7 @@ MonoBehaviour:
   - {fileID: -5976212971546823431, guid: 9648d466a2c67c549b1ae6f023f0c498, type: 3}
   - {fileID: -5976212971546823431, guid: 9648d466a2c67c549b1ae6f023f0c498, type: 3}
   - {fileID: 2922437984316921655, guid: 4bb1334768c06854daa1f8c116d1f220, type: 3}
-  knifeCounts: 01000000010000000100000001000000
+  knifeCounts: 05000000070000000800000008000000
   rotationScripts:
   - {fileID: 673848329}
   - {fileID: 2128118524}
@@ -1451,13 +1451,13 @@ MonoBehaviour:
   bossRotationScript: {fileID: 637348070}
   circleHitEffects:
   - hitEffect: {fileID: 0}
-    hitSound: {fileID: 8300000, guid: 6d3dfe4e522d33c4199fc0d93137e7e4, type: 3}
+    hitSound: {fileID: 8300000, guid: 4c5818eeaf6dd5d41aca5240c455658a, type: 3}
   - hitEffect: {fileID: 0}
-    hitSound: {fileID: 8300000, guid: 6d3dfe4e522d33c4199fc0d93137e7e4, type: 3}
+    hitSound: {fileID: 8300000, guid: 4c5818eeaf6dd5d41aca5240c455658a, type: 3}
   - hitEffect: {fileID: 0}
-    hitSound: {fileID: 8300000, guid: 6d3dfe4e522d33c4199fc0d93137e7e4, type: 3}
+    hitSound: {fileID: 8300000, guid: 4c5818eeaf6dd5d41aca5240c455658a, type: 3}
   - hitEffect: {fileID: 0}
-    hitSound: {fileID: 8300000, guid: b260a87c99e33754f8dd2ee8909fa101, type: 3}
+    hitSound: {fileID: 8300000, guid: c4b69c01b2acf8f42b2c1cc67e7a9c07, type: 3}
   audioSource: {fileID: 1696584214}
   challengeTexts:
   - {fileID: 6448390446752961210}
