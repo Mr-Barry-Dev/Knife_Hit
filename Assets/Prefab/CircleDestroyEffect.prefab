@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coneSprite: {fileID: -7927844993678735424, guid: c156084a293dda74599710644d36ad42, type: 3}
-  pieceCount: 8
+  pieceCount: 20
   explosionForce: 12
   pieceLifeTime: 0.8
   minSize: 0.2

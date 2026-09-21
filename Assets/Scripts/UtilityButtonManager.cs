@@ -1,6 +1,7 @@
 // using UnityEngine;
 // using UnityEngine.UI;
 // using UnityEngine.EventSystems;
+// using UnityEngine.SceneManagement;
 // using System.Collections;
 // using TMPro;
 
@@ -39,6 +40,13 @@
 //     [Header("PLAY OBJECTS")]
 //     public GameObject[] objectsToDisableOnPlay;
 //     public GameObject[] objectsToEnableOnPlay;
+
+//     [Header("SCENE LOAD ON PLAY")]
+//     [Tooltip("Play button dabane par jo scene load hogi (Build Settings me add honi chahiye)")]
+//     public string sceneToLoad = "GameScene";
+
+//     [Tooltip("Agar true hai to pehle UI animation complete hone dega, phir scene load karega")]
+//     public bool waitForAnimBeforeLoad = true;
 
 //     // ================= SOUND TOGGLE ==========================================
 
@@ -156,6 +164,7 @@
 //         if (resetGameButton != null)
 //             resetGameButton.onClick.AddListener(OnResetGameClick);
 
+//         // Sound state PlayerPrefs se load karke sync karo (isी se next scene bhi sync rahega)
 //         bool isOn = PlayerPrefs.GetInt(SOUND_KEY, 1) == 1;
 //         if (soundToggle != null)
 //         {
@@ -225,43 +234,6 @@
 
 //     // ================= RESET GAME ============================================
 
-// // void OnResetGameClick()
-// // {
-// //     // Best score data
-// //     PlayerPrefs.DeleteKey(BEST_SCORE_KEY);
-// //     PlayerPrefs.DeleteKey(BEST_STAGE_KEY);
-// //     PlayerPrefs.DeleteKey(COINS_KEY);
-
-// //     // Challenge system
-// //     PlayerPrefs.DeleteKey("SavedLevel");
-// //     PlayerPrefs.DeleteKey("SavedChallenge");
-// //     PlayerPrefs.DeleteKey("WinChallenge");
-
-// //     PlayerPrefs.DeleteKey("CURRENT_MODE");
-// //     PlayerPrefs.DeleteKey("CURRENT_LEVEL");
-
-// //     // Mode levels
-// //     for (int i = 1; i <= 20; i++)
-// //     {
-// //         PlayerPrefs.DeleteKey("MODE_" + i + "_LEVEL");
-// //     }
-
-// //     // Gems reset
-// //     if (GemManager.Instance != null)
-// //     {
-// //         GemManager.Instance.ResetGems();
-// //     }
-
-// //     PlayerPrefs.Save();
-
-// //     RefreshUtilityTexts();
-// //     RefreshModeTexts();
-
-// //     if (gameManager != null)
-// //         gameManager.ReloadGame();
-
-// //     Debug.Log("Complete Game Reset");
-// // }
 // void OnResetGameClick()
 // {
 //     // Best score data
@@ -438,22 +410,52 @@
 
 //     // ================= PLAY BUTTON ===========================================
 
-//     void OnPlayPressed() => StartCoroutine(HandlePlayObjects());
+// //     void OnPlayPressed() => StartCoroutine(HandlePlayObjects());
 
-//     IEnumerator HandlePlayObjects()
-//     {
-//         // Pehle UI objects animate karo
-//         foreach (GameObject obj in objectsToDisableOnPlay)
-//             if (obj != null) StartCoroutine(ScaleOut(obj));
+// // IEnumerator HandlePlayObjects()
+// // {
+// //     // GameManager ko batao ki game shuru ho gaya — knife spawn hogi
+// //     if (gameManager != null)
+// //         gameManager.StartGame();
 
-//         foreach (GameObject obj in objectsToEnableOnPlay)
-//             if (obj != null) { obj.SetActive(true); StartCoroutine(ScaleIn(obj)); }
+// //     // Agar animation complete hone ka wait karna hai to thoda ruk jao
+// //     if (waitForAnimBeforeLoad)
+// //         yield return new WaitForSeconds(animDuration);
+// //     else
+// //         yield return null;
 
-//         // GameManager ko batao ki game shuru ho gaya — knife spawn hogi
-//         if (gameManager != null)
-//             gameManager.StartGame();
+// //     LoadPlayScene();
+// // }
 
+
+// void OnPlayPressed() => StartCoroutine(HandlePlayObjects());
+
+// IEnumerator HandlePlayObjects()
+// {
+//     // Agar animation complete hone ka wait karna hai to thoda ruk jao
+//     if (waitForAnimBeforeLoad)
+//         yield return new WaitForSeconds(animDuration);
+//     else
 //         yield return null;
+
+//     LoadPlayScene();
+// }
+
+//     void LoadPlayScene()
+//     {
+//         if (string.IsNullOrEmpty(sceneToLoad))
+//         {
+//             Debug.LogWarning("UtilityButtonManager: sceneToLoad set nahi hai, scene load skip ho gaya.");
+//             return;
+//         }
+
+//         // Sound state PlayerPrefs mein already saved hai, aur AudioListener.volume
+//         // engine-level global setting hai (scene load pe reset nahi hoti),
+//         // isliye current sound state naye scene mein bhi carry hoga.
+//         // Agar naye scene mein bhi sound toggle UI hai, uske apne Start() mein
+//         // UtilityButtonManager.RefreshSoundState() call karke sync kar lena.
+
+//         SceneManager.LoadScene(sceneToLoad);
 //     }
 
 //     IEnumerator ScaleOut(GameObject obj)
@@ -628,9 +630,13 @@
 //         PlayerPrefs.GetInt("SOUND_STATE", 1) == 1;
 
 //     AudioListener.volume = soundOn ? 1f : 0f;
+
+   
+// }
+ 
 // }
 
-// }
+
 
 
 
@@ -684,10 +690,28 @@ public class UtilityButtonManager : MonoBehaviour
     [Tooltip("Agar true hai to pehle UI animation complete hone dega, phir scene load karega")]
     public bool waitForAnimBeforeLoad = true;
 
-    // ================= SOUND TOGGLE ==========================================
+    
+    // ================= SOUND TOGGLE =========================
 
-    [Header("SOUND TOGGLE")]
+    [Header("SOUND SWITCH TOGGLE")]
     public Toggle soundToggle;
+
+    [Header("SWITCH REFERENCES")]
+    public RectTransform soundHandle;
+    public Image soundBackground;
+
+    [Header("SWITCH COLORS")]
+    public Color soundOnColor = Color.green;
+    public Color soundOffColor = Color.gray;
+
+    [Header("SWITCH HANDLE POSITIONS")]
+    public float soundOnX = 25f;
+    public float soundOffX = -25f;
+
+    [Header("SWITCH ANIMATION")]
+    public float soundSlideDuration = 0.15f;
+
+    private Coroutine soundSlideCoroutine;
 
     private const string SOUND_KEY = "SOUND_STATE";
 
@@ -801,12 +825,24 @@ if (openChallengePanelOnStart == 1)
             resetGameButton.onClick.AddListener(OnResetGameClick);
 
         // Sound state PlayerPrefs se load karke sync karo (isी se next scene bhi sync rahega)
+       
+        // Sound state load karo
         bool isOn = PlayerPrefs.GetInt(SOUND_KEY, 1) == 1;
+
         if (soundToggle != null)
         {
+            soundToggle.onValueChanged.RemoveListener(OnToggleChanged);
+
             soundToggle.isOn = isOn;
+
             soundToggle.onValueChanged.AddListener(OnToggleChanged);
         }
+
+        ApplySound(isOn);
+
+        UpdateSoundSwitch(isOn, true);
+
+
         ApplySound(isOn);
         AddClickSoundToAllButtons();
         StartPulse();
@@ -1004,22 +1040,111 @@ void OnResetGameClick()
 
     float EaseOutSine(float t) => Mathf.Sin((t * Mathf.PI) / 2f);
 
-    // ================= SOUND CONTROL =========================================
+    
+    // ================= SOUND CONTROL =========================
 
     void OnToggleChanged(bool value)
     {
         PlayerPrefs.SetInt(SOUND_KEY, value ? 1 : 0);
         PlayerPrefs.Save();
+
         ApplySound(value);
+
+        UpdateSoundSwitch(value, false);
+    }
+
+   
+
+    void UpdateSoundSwitch(bool isOn, bool instant)
+    {
+        if (soundHandle == null || soundBackground == null)
+            return;
+
+        if (soundSlideCoroutine != null)
+        {
+            StopCoroutine(soundSlideCoroutine);
+            soundSlideCoroutine = null;
+        }
+
+        soundSlideCoroutine = StartCoroutine(
+            AnimateSoundSwitch(isOn, instant)
+        );
+    }
+
+    IEnumerator AnimateSoundSwitch(bool isOn, bool instant)
+    {
+        Vector2 targetPosition = soundHandle.anchoredPosition;
+
+        targetPosition.x = isOn ? soundOnX : soundOffX;
+
+        Color targetColor = isOn ? soundOnColor : soundOffColor;
+
+        if (instant)
+        {
+            soundHandle.anchoredPosition = targetPosition;
+            soundBackground.color = targetColor;
+
+            soundSlideCoroutine = null;
+            yield break;
+        }
+
+        Vector2 startPosition = soundHandle.anchoredPosition;
+        Color startColor = soundBackground.color;
+
+        float duration = Mathf.Max(0.01f, soundSlideDuration);
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.unscaledDeltaTime;
+
+            float t = Mathf.Clamp01(elapsed / duration);
+
+            // Smooth slide animation
+            float smoothT = Mathf.SmoothStep(0f, 1f, t);
+
+            soundHandle.anchoredPosition = Vector2.Lerp(
+                startPosition,
+                targetPosition,
+                smoothT
+            );
+
+            soundBackground.color = Color.Lerp(
+                startColor,
+                targetColor,
+                smoothT
+            );
+
+            yield return null;
+        }
+
+        soundHandle.anchoredPosition = targetPosition;
+        soundBackground.color = targetColor;
+
+        soundSlideCoroutine = null;
+    }
+
+    public static void PlaySound(AudioSource source, AudioClip clip)
+    {
+        if (AudioListener.volume == 0f ||
+            source == null ||
+            clip == null)
+            return;
+
+        source.PlayOneShot(clip);
+    }
+
+    public static void RefreshSoundState()
+    {
+        bool soundOn =
+            PlayerPrefs.GetInt("SOUND_STATE", 1) == 1;
+
+        AudioListener.volume = soundOn ? 1f : 0f;
     }
 
     void ApplySound(bool isOn) => AudioListener.volume = isOn ? 1f : 0f;
 
-    public static void PlaySound(AudioSource source, AudioClip clip)
-    {
-        if (AudioListener.volume == 0f || source == null || clip == null) return;
-        source.PlayOneShot(clip);
-    }
+   
 
     // ================= BUTTON SOUND ==========================================
 
@@ -1260,14 +1385,7 @@ void RefreshModeTexts()
     
 }
 
-public static void RefreshSoundState()
-{
-    bool soundOn =
-        PlayerPrefs.GetInt("SOUND_STATE", 1) == 1;
 
-    AudioListener.volume = soundOn ? 1f : 0f;
-
-   
-}
+ 
  
 }
