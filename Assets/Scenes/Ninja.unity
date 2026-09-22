@@ -497,7 +497,7 @@ MonoBehaviour:
   targetRenderer: {fileID: 1148203221}
   bossSprite: {fileID: 7985536825217809410, guid: d3899d5cd685a1e4485a19c3e3638a83, type: 3}
   minSpeed: 150
-  maxSpeed: 400
+  maxSpeed: 250
   stopChance: 0.4
   stopDuration: 0.5
   minChangeTime: 0.5
@@ -1737,8 +1737,8 @@ MonoBehaviour:
   winSliderFillStep: 0.25
   winSliderFillDelay: 2
   winSliderFillDuration: 0.4
-  winSliderSound: {fileID: 0}
-  sliderCompletePanel: {fileID: 1948715690}
+  winSliderSound: {fileID: 8300000, guid: f8caf33b58997cd409c97a29e3268e7b, type: 3}
+  sliderCompletePanel: {fileID: 8808911692138538554}
   sliderCompleteSound: {fileID: 0}
   sliderCompletePanelAutoHideTime: 0
 --- !u!82 &1696584214
@@ -2084,11 +2084,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1948715690 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 38991690788161823, guid: e49c70a5d78ca7a46920090d2106c329, type: 3}
-  m_PrefabInstance: {fileID: 8808911692138538553}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2105601852 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6387523916999681401, guid: e49c70a5d78ca7a46920090d2106c329, type: 3}
@@ -2503,6 +2498,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e49c70a5d78ca7a46920090d2106c329, type: 3}
+--- !u!1 &8808911692138538554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7381612883659737237, guid: e49c70a5d78ca7a46920090d2106c329, type: 3}
+  m_PrefabInstance: {fileID: 8808911692138538553}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &9131814457149593785 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8149635719295457962, guid: e49c70a5d78ca7a46920090d2106c329, type: 3}

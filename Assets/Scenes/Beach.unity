@@ -405,7 +405,7 @@ MonoBehaviour:
   targetRenderer: {fileID: 2086711207}
   bossSprite: {fileID: 2922437984316921655, guid: 4bb1334768c06854daa1f8c116d1f220, type: 3}
   minSpeed: 150
-  maxSpeed: 400
+  maxSpeed: 250
   stopChance: 0.4
   stopDuration: 0.5
   minChangeTime: 0.5
@@ -1492,8 +1492,8 @@ MonoBehaviour:
   winSliderFillStep: 0.25
   winSliderFillDelay: 2
   winSliderFillDuration: 0.4
-  winSliderSound: {fileID: 0}
-  sliderCompletePanel: {fileID: 1948715690}
+  winSliderSound: {fileID: 8300000, guid: f8caf33b58997cd409c97a29e3268e7b, type: 3}
+  sliderCompletePanel: {fileID: 8808911692138538554}
   sliderCompleteSound: {fileID: 0}
   sliderCompletePanelAutoHideTime: 0
 --- !u!82 &1696584214
@@ -2244,11 +2244,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1948715690 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 38991690788161823, guid: e49c70a5d78ca7a46920090d2106c329, type: 3}
-  m_PrefabInstance: {fileID: 8808911692138538553}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2086711206
 GameObject:
   m_ObjectHideFlags: 0
@@ -3288,6 +3283,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 38991690788161823, guid: e49c70a5d78ca7a46920090d2106c329, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 276641844616491892, guid: e49c70a5d78ca7a46920090d2106c329, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1000
@@ -3312,6 +3311,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1925516996}
+    - target: {fileID: 2933977907987393367, guid: e49c70a5d78ca7a46920090d2106c329, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5773479636031620015, guid: 012af4284a9f3fa48ac852726676462d, type: 3}
     - target: {fileID: 3461628030551571836, guid: e49c70a5d78ca7a46920090d2106c329, type: 3}
       propertyPath: m_Type
       value: 0
@@ -3457,6 +3460,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e49c70a5d78ca7a46920090d2106c329, type: 3}
+--- !u!1 &8808911692138538554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7381612883659737237, guid: e49c70a5d78ca7a46920090d2106c329, type: 3}
+  m_PrefabInstance: {fileID: 8808911692138538553}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &9131814457149593785 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8149635719295457962, guid: e49c70a5d78ca7a46920090d2106c329, type: 3}
